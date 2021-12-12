@@ -24,6 +24,7 @@ button {
   overflow-x: hidden;
 }
 
+/* https://codepen.io/sweetsatosi/pen/JMmKqM */
 .button-three {
   position: relative;
   background-color: #fff;
@@ -52,6 +53,7 @@ button {
   transition: 0s
 }
 
+/* https://stackoverflow.com/a/20910008/7852784 */
 .hidden {
   opacity: 0;
   transition: opacity 2s 1.5s;
