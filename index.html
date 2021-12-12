@@ -8,10 +8,11 @@
   <body>
     <div class="video-background">
       <div id="overlay" class="overlay">
-        <button class="button-three" onclick="roll();">Welcome</button>
+        <button class="button-three" onclick="document.getElementById('overlay').classList.add('hidden'); document.getElementById('iframe').src = document.getElementById('iframe').dataset.src + '?autoplay=1';">First</button>
+        <button class="button-three" onclick="document.getElementById('overlay').classList.add('hidden');document.getElementById('iframe').src += '&autoplay=1';">Second</button>
       </div>
-      <!--<iframe id="iframe" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-      <iframe id="iframe" allowfullscreen="" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"></iframe>
+      <iframe id="iframe1" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="iframe2" allowfullscreen="" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"></iframe>
     </div>
     <script src="./static/js/main.js" type="text/javascript"></script>
   </body>
