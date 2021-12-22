@@ -1,4 +1,6 @@
 
+const RICK_MP3 = 'https://archive.org/download/rick-astley-never-gonna-give-you-up/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up.mp3';
+const audio =new Audio(RICK_MP3);
 const button = document.getElementById('button');
 const overlay = document.getElementById('overlay');
 
