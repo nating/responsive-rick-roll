@@ -10,9 +10,7 @@ button.onclick = e => {
     playerVars: { 'autoplay': 1, 'controls': 0, 'info': 0 },
     events: {
       'onReady': (event) => {
-        event.target.mute();
         event.target.playVideo();
-        audio.play();
       }
     },
   });
