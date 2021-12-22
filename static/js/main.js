@@ -20,6 +20,11 @@ function onYouTubeIframeAPIReady() {
           event.target.playVideo();
           overlay.classList.add('hidden');
         }
+      },
+      onStateChange: (event) => {
+        if (event.data === YT.PlayerState.ENDED) {
+          event.target.playVideo();
+        }
       }
     }
   });
