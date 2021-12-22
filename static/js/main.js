@@ -12,7 +12,13 @@ let player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('video', {
     videoId: 'dQw4w9WgXcQ',
-    playerVars: { 'controls': 0, 'info': 0 },
+    playerVars: {
+      'controls': 0,
+      'autohide': 1,
+      'showinfo' : 0,
+      'loop': 1,
+      'modestbranding': 1
+    },
     events: {
       'onReady': onPlayerReady
     }
