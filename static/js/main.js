@@ -1,12 +1,20 @@
 
-document.getElementById('btn').onclick = e => {
-  document.getElementById('vid').play();
-  document.getElementById('overlay').classList.add('hidden');
-}
+const RICK_MP3 = 'https://archive.org/download/rick-astley-never-gonna-give-you-up/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up.mp3';
+const audio =new Audio(RICK_MP3);
+const button = document.getElementById('button');
+const overlay = document.getElementById('overlay');
 
-/*
-var roll = function(){
-  document.getElementById('overlay').classList.add('hidden');
-  document.getElementById('iframe').src += '&autoplay=1';
+button.onclick = e => {
+  new YT.Player('video', {
+    videoId: 'dQw4w9WgXcQ',
+    playerVars: { 'autoplay': 1, 'controls': 0, 'info': 0 },
+    events: {
+      'onReady': (event) => {
+        event.target.mute();
+        event.target.playVideo();
+        audio.play();
+      }
+    },
+  });
+  overlay.classList.add('hidden');
 }
-*/
