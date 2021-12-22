@@ -1,21 +1,23 @@
-< Under development. Haven't get mobile to work but am confident I can >
+# Responsive Rick Roll
 
-TODO:
-* [ ] Look at the YT player API: https://stackoverflow.com/a/7406115/7852784
-* [ ] https://stackoverflow.com/a/43638448/7852784
+This Rick Roll takes up the user's entire viewport even if on mobile. It will always show the center of the music video, which works well because this is where Rick Astley and the other dancers are displayed. To see it in action visit https://geoff.ie/responsive-rick-roll.
 
-# responsive-rick-roll
-A rick roll that autoplays and takes up the entire viewport.
+Features:
+* Responsive
+* Users can't pause / click away
+* Loops
 
-Fork or forward to this hosted code, but don't tell my friends about it 😂
+## Why doesn't it autoplay?? 😭😩😤
 
+Browsers don't want websites to streaming video and audio automatically because it could cost users a lot of data: https://stackoverflow.com/a/26066844
 
-Browsers don't want users streaming video and audio automatically because it could cost them a lot of data: https://stackoverflow.com/a/26066844
+## How it works
 
+* Uses the [YouTube Player API](https://developers.google.com/youtube/iframe_api_reference) to play the official music video (for the best video and audio quality).
+* Uses a little CSS to essentially zoom in on the video on smaller screens so that it takes up the entire screen.
 
-Rick Astley mp3 from here: https://the360report.com/rick-astley-never-gonna-give-you-up-mp3-download/: https://the360report.com/wp-content/uploads/2021/09/Rick_Astley_-_Never_Gonna_Give_You_Up.mp3
+## Why it works this way
 
-Play video automatically but muted on mobile: https://stackoverflow.com/a/59267421
+I don't want to host Never Gonna Give You Up because that may be morally wrong 🤔. This means that you can have a `<video>` tag with a `src` attribute that points to an mp4 file hosted somewhere else. After enough searching on the Internet for me, it seemed that the best quality version of the video at a source I can trust to continue hosting it is the official music video on YouTube. So in order to have the video the best quality, you should embed the video from YouTube.
 
-It definitely works sometimes on Safari iOS at this commit: https://github.com/nating/responsive-rick-roll/commit/4633c9464609185c9aec6a6b0ad02c220600ade4
-
+The best way to embed and interact with YouTube videos on your website is by using the [YouTube Player API](https://developers.google.com/youtube/iframe_api_reference). This allows you to load the video, pause it, play it, mute it etc. from your JS. You can also react to state changes like the video being ready to play or ending.
