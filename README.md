@@ -17,6 +17,5 @@ Rick Astley mp3 from here: https://the360report.com/rick-astley-never-gonna-give
 
 Play video automatically but muted on mobile: https://stackoverflow.com/a/59267421
 
-I swear it worked at this commit: https://github.com/nating/responsive-rick-roll/commit/07aeb9a67b5932740adfcd3a645396c6d7b3d784
-Maybe it worked at the commit beforehand, and my mobile browsers were just getting the old version.
+It definitely works sometimes on Safari iOS at this commit: https://github.com/nating/responsive-rick-roll/commit/4633c9464609185c9aec6a6b0ad02c220600ade4
 
