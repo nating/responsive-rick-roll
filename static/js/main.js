@@ -14,8 +14,6 @@ function onYouTubeIframeAPIReady() {
     videoId: 'dQw4w9WgXcQ',
     playerVars: {
       'controls': 0,
-      'autohide': 1,
-      'showinfo' : 0,
       'loop': 1,
       'modestbranding': 1
     },
